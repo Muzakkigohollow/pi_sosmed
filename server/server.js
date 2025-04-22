@@ -24,7 +24,6 @@ wss.on('connection', (ws) => {
 })
 
 app.post('/send-message', (req, res) => {
-
     const { data } = req.body
 
     if (!!data == false) {
@@ -71,4 +70,4 @@ app.delete("/student/:id", (req, res) => {
     })
 })
 
-app.listen(PORT, () => console.log(`Server running at http://${hostName}:${PORT}`))
+server.listen(PORT, () => console.log(`Server running at http://${hostName}:${PORT}`))

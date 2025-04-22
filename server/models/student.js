@@ -16,9 +16,9 @@ module.exports = (sequelize, DataTypes) => {
   student.init({
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
-    classes: DataTypes.ENUM,
+    classes: DataTypes.ENUM(['X','XI',',XII','XIII']),
     major_id: DataTypes.INTEGER,
-    gender: DataTypes.ENUM
+    gender: DataTypes.ENUM(["M","F"])
   }, {
     sequelize,
     modelName: 'student',
